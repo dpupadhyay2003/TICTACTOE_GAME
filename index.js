@@ -1,10 +1,3 @@
-let currentPlayer = "X";
-let board = [
-    ["", "", ""],
-    ["", "", ""],
-    ["", "", ""]
-];
-
 var counter = 0;
 var player1 = 0;
 var player2 = 0;
@@ -18,7 +11,7 @@ $(document).ready(function () {
 
     $('#player-1-score').html(player1Label);
     $('#player-2-score').html(player2Label);
-
+    $('#player1Container').addClass('border-primary');
 });
 
 function onMove(id) {
@@ -28,23 +21,22 @@ function onMove(id) {
             if (counter % 2 == 0) {
                 //Player - 2 Turn
                 // Print 'o'
-                $('#rect' + id).html('o').addClass('o-value text-center');
-                $('#player-2-score').removeClass('current-player-box');
-                $('#player-1-score').addClass('current-player-box margin-left-32').removeClass('margin-left-35');
-                $('#tie-score').addClass('margin-left-6').removeClass('margin-left-8');
+                $('#rect' + id).html('o').addClass('text-center');
+                $('#player2Container').removeClass('border-primary');
+                $('#player1Container').addClass('border-primary');
             } else {
                 //Player - 1 Turn
                 // Print 'x'
-                $('#rect' + id).html('x').addClass('x-value text-center');
-                $('#player-2-score').addClass('current-player-box');
-                $('#player-1-score').removeClass('current-player-box margin-left-32').addClass('margin-left-35');
-                $('#tie-score').addClass('margin-left-8').removeClass('margin-left-6');
+                $('#rect' + id).html('x').addClass('text-center');
+                $('#player1Container').removeClass('border-primary');
+                $('#player2Container').addClass('border-primary');
             }
         } else {
             //reset counter
             counter = 0;
         }
-        gameCondition();
+
+        setTimeout(gameCondition, 100);
     }
 }
 
@@ -55,6 +47,8 @@ function resetAllBoxes() { // Clear All Boxes, as one of the player wins or matc
         $('#rect' + index).html('');
     }
     counter = 0;
+    $('#player2Container').removeClass('border-primary');
+    $('#player1Container').addClass('border-primary');
 }
 
 function updateScore(value) { // Check and Update the Score.       
@@ -137,6 +131,15 @@ function resetScore() {
     $('#player-1-value').html(0);
     $('#player-2-value').html(0);
     $('#tie-value').html(0);
+
+    $('#player2Container').removeClass('border-primary');
+    $('#player1Container').addClass('border-primary');
+
+
+    for(let i=1; i<=9;i++){
+        $('#rect' + i).html('');
+    }
+
 }
 
 function resetLeaderBoard() {

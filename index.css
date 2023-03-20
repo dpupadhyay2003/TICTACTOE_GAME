@@ -4,6 +4,11 @@ body {
   color: bisque;
 }
 
+.container .height{
+    height: 70px;
+}
+
+
 @keyframes color {
   0% {
     fill: white;
@@ -16,8 +21,22 @@ body {
   }
 }
 
+@keyframes size-variation {
+  0%, 100% {
+    font-size: 40px;
+  }
+  50% {
+    font-size: 60px;
+  }
+}
+
+.animated-text {
+  animation: size-variation 2s ease-in-out infinite;
+}
+
 .myText {
   animation: color 2s linear infinite;
+  font-size: 50px;
 }
 
 .my-btn {

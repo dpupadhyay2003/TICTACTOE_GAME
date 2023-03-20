@@ -12,13 +12,13 @@
 
 
     <div class="container">
-        <div class="row">
+        <div class="row height mt-5">
             <div class="col-sm">
-                <h1 class="text-center">Tic Tac Toe</h1>
+                <h1 class="text-center animated-text">Tic Tac Toe</h1>
             </div>
         </div>
-        <div class="row">
-            <div class="col-sm">
+        <div class="row mt-5 mb-5">
+            <div id="player1Container" class="col-sm border border-2">
                 <div class="text-center" id="player-1-score">
                     Player - 1
                 </div>
@@ -32,7 +32,7 @@
                     <p class="text-center" id="tie-value">0</p>
                 </div>
             </div>
-            <div class="col-sm">
+            <div id="player2Container" class="col-sm border border-2">
                 <div class="text-center" id="player-2-score">
                     Player - 2<br>
                 </div>
@@ -43,7 +43,7 @@
         </div>
         <div class="row justify-content-end">
             <div class="col-4">
-                <div class="clear-both margin-left-37">
+                <div>
                     <svg width="300" height="300">
                         <rect x="0" y="0" width="100" height="100" stroke="white" stroke-width="4" onclick="onMove(1)" />
                         <rect x="100" y="0" width="100" height="100" stroke="white" stroke-width="4" onclick="onMove(2)"/>
@@ -56,15 +56,15 @@
                         <rect x="200" y="200" width="100" height="100" stroke="white" stroke-width="4" onclick="onMove(9)"/>
         
         
-                        <text class="myText" id="rect1" x="35" y="60" font-size="40" fill="white"></text>
-                        <text class="myText" id="rect2" x="135" y="60" font-size="40" fill="white"></text>
-                        <text class="myText" id="rect3" x="235" y="60" font-size="40" fill="white"></text>
-                        <text class="myText" id="rect4" x="35" y="160" font-size="40" fill="white"></text>
-                        <text class="myText" id="rect5" x="135" y="160" font-size="40" fill="white"></text>
-                        <text class="myText" id="rect6" x="235" y="160" font-size="40" fill="white"></text>
-                        <text class="myText" id="rect7" x="35" y="260" font-size="40" fill="white"></text>
-                        <text class="myText" id="rect8" x="135" y="260" font-size="40" fill="white"></text>
-                        <text class="myText" id="rect9" x="235" y="260" font-size="40" fill="white"></text>
+                        <text class="myText animated-text" id="rect1" x="35" y="60" font-size="40" fill="white"></text>
+                        <text class="myText animated-text" id="rect2" x="135" y="60" font-size="40" fill="white"></text>
+                        <text class="myText animated-text" id="rect3" x="235" y="60" font-size="40" fill="white"></text>
+                        <text class="myText animated-text" id="rect4" x="35" y="160" font-size="40" fill="white"></text>
+                        <text class="myText animated-text" id="rect5" x="135" y="160" font-size="40" fill="white"></text>
+                        <text class="myText animated-text" id="rect6" x="235" y="160" font-size="40" fill="white"></text>
+                        <text class="myText animated-text" id="rect7" x="35" y="260" font-size="40" fill="white"></text>
+                        <text class="myText animated-text" id="rect8" x="135" y="260" font-size="40" fill="white"></text>
+                        <text class="myText animated-text" id="rect9" x="235" y="260" font-size="40" fill="white"></text>
                     </svg>
                 </div>
             </div>
